@@ -26,5 +26,22 @@ variable "throughput_in_MBps" {
    default = "128"
 }
 
+variable "svm_name" {
+   type = string
+   default = "fsx"
+}
+
+variable "vol_info" {
+   type = map
+   default = {
+      "vol_name" = "volx"
+	  "junction_path" = "/volx"
+	  "size" = 1024
+	  "efficiency" = true
+	  "tier_policy_name" = "AUTO"
+	  "cooling_period" = 31
+   }
+}
+
 
 
